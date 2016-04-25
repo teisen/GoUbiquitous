@@ -38,17 +38,17 @@ import com.example.android.sunshine.app.data.WeatherContract;
  * IntentService which handles updating all Today widgets with the latest data
  */
 public class TodayWidgetIntentService extends IntentService {
-    private static final String[] FORECAST_COLUMNS = {
+    public static final String[] FORECAST_COLUMNS = {
             WeatherContract.WeatherEntry.COLUMN_WEATHER_ID,
             WeatherContract.WeatherEntry.COLUMN_SHORT_DESC,
             WeatherContract.WeatherEntry.COLUMN_MAX_TEMP,
             WeatherContract.WeatherEntry.COLUMN_MIN_TEMP
     };
     // these indices must match the projection
-    private static final int INDEX_WEATHER_ID = 0;
-    private static final int INDEX_SHORT_DESC = 1;
-    private static final int INDEX_MAX_TEMP = 2;
-    private static final int INDEX_MIN_TEMP = 3;
+    public static final int INDEX_WEATHER_ID = 0;
+    public static final int INDEX_SHORT_DESC = 1;
+    public static final int INDEX_MAX_TEMP = 2;
+    public static final int INDEX_MIN_TEMP = 3;
 
     public TodayWidgetIntentService() {
         super("TodayWidgetIntentService");

@@ -31,7 +31,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.android.sunshine.app.data.WeatherContract;
-import com.example.android.sunshine.app.gcm.RegistrationIntentService;
 import com.example.android.sunshine.app.sync.SunshineSyncAdapter;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -102,10 +101,6 @@ public class MainActivity extends AppCompatActivity implements ForecastFragment.
             SharedPreferences sharedPreferences =
                     PreferenceManager.getDefaultSharedPreferences(this);
             boolean sentToken = sharedPreferences.getBoolean(SENT_TOKEN_TO_SERVER, false);
-            if (!sentToken) {
-                Intent intent = new Intent(this, RegistrationIntentService.class);
-                startService(intent);
-            }
         }
     }
 
